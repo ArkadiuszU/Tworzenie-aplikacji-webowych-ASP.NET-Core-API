@@ -22,5 +22,17 @@ namespace WebApplication1
             })
             .ToArray();
         }
+
+        public IEnumerable<WeatherForecast> Get(int min, int max, int number)
+        {
+            var rng = new Random();
+            return Enumerable.Range(1, number).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(min, max),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            })
+            .ToArray();
+        }
     }
 }

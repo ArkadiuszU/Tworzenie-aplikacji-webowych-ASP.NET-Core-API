@@ -7,7 +7,7 @@ namespace WebApplication1
 {
     public interface IWeatherForecastService
     {
-        IEnumerable<WeatherForecast> Get();
+        IEnumerable<WeatherForecast> Get(int min, int max, int number);
 
     }
 }

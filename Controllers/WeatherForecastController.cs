@@ -20,19 +20,26 @@ namespace WebApplication1.Controllers
             _service = service;
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        // optional  [HttpPost][Route("generate/{number}")] 
+        [HttpPost("generate/{number}")]
+        public ActionResult<IEnumerable<WeatherForecast>> Generate([FromBody] int max, [FromBody] int min, [FromRoute] int number)
         {
-            var result = _service.Get();
-            return result;
-        }
 
-        [HttpGet]
-        [Route("currentDay")]
-        public IEnumerable<WeatherForecast> Get2()
-        {
-            var result = _service.Get();
-            return result;
+            if(number < 0 || max < min )
+            {
+                return BadRequest();
+            }
+
+            //option 1
+            //HttpContext.Response.StatusCode = 401;
+
+            //option 2
+            //return StatusCode(401, ("Hello " + name));
+
+            var result = _service.Get(min:min, max:max, number:number);
+
+            return OK(result);
+
         }
 
     }
