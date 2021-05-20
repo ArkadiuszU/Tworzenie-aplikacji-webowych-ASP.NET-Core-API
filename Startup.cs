@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.Entities;
+using WebApplication1.Services;
 
 namespace WebApplication1
 {
@@ -30,6 +31,7 @@ namespace WebApplication1
             services.AddDbContext<RestaurantDbContext>();
             services.AddScoped<RestaurantSeeder>();
             services.AddAutoMapper(this.GetType().Assembly);
+            services.AddScoped<IRestaurantService, RestaurantService>();
 
         }
 
