@@ -12,6 +12,7 @@ using WebApplication1.Services;
 namespace WebApplication1.Controllers
 {
     [Route("api/restaurant")]
+    [ApiController]
     public class RestaurantController : ControllerBase
     {
         private readonly IRestaurantService _restaurantService;
@@ -24,23 +25,14 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<RestaurantDto>> GetAll()
         {
-
             var restaurantsDtos = _restaurantService.GetAll();
             return Ok(restaurantsDtos);
-
         }
 
         [HttpGet("{id}")]
         public ActionResult<RestaurantDto> GetById([FromRoute] int id )
         {
-            Console.WriteLine("nohej");
             var restaurant = _restaurantService.GetById(id);
-
-            if (restaurant is null)
-            {
-                return BadRequest();
-            }
-
 
             return Ok(restaurant);
 
@@ -49,10 +41,6 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult CreateRestaurant([FromBody] CreateRestaurantDto dto)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
 
             int restaurantId = _restaurantService.Create(dto);
 
@@ -63,13 +51,8 @@ namespace WebApplication1.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete([FromRoute] int id)
         {
-            bool isDeleted = _restaurantService.Delete(id);
-
-            if(! isDeleted)
-            {
-                return NotFound();
-            }
-
+             _restaurantService.Delete(id);
+        
             return NoContent();
            
         }
@@ -77,18 +60,13 @@ namespace WebApplication1.Controllers
         [HttpPut("{id}")]
         public ActionResult Edit([FromRoute] int id, [FromBody] EditRestaurantDto dto)
         {
-            Console.WriteLine("Edit edit ");
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            // atrybut [ApiControler] ogarnia sprawę 
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
-            bool isEdited = _restaurantService.Edit(id, dto);
-
-            if (!isEdited)
-            {
-                return NotFound();
-            }
+            _restaurantService.Edit(id, dto);
 
             return NoContent();
         }
