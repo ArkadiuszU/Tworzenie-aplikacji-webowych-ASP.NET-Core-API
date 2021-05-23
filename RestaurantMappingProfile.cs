@@ -23,7 +23,7 @@ namespace WebApplication1
             CreateMap<CreateRestaurantDto, Restaurant>()
                 .ForMember(r => r.Adress, c => c.MapFrom(s => new Adress() { City = s.City, PostalCode = s.PostCode, Street = s.Street }));
 
-
+            CreateMap<CreateDishDto, Dish>();
              
         }
       

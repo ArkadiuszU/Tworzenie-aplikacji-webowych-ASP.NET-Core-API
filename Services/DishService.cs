@@ -5,14 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using RestaurantAPI.Entities;
-using RestaurantAPI.Exceptions;
-using RestaurantAPI.Models;
 using WebApplication1.Entities;
 using WebApplication1.Exceptions;
 using WebApplication1.Models;
 
-namespace RestaurantAPI.Services
+namespace WebApplication1.Services
 {
     public interface IDishService
     {

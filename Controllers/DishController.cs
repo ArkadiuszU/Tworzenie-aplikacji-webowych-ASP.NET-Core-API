@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using RestaurantAPI.Models;
-using RestaurantAPI.Services;
 using WebApplication1.Models;
+using WebApplication1.Services;
 
-namespace RestaurantAPI.Controllers
+namespace WebApplication1.Controllers
 {
     [Route("api/restaurant/{restaurantId}/dish")]
     [ApiController]
@@ -21,16 +20,8 @@ namespace RestaurantAPI.Controllers
             _dishService = dishService;
         }
 
-        [HttpDelete]
-        public ActionResult Delete([FromRoute] int restaurantId)
-        {
-            _dishService.RemoveAll(restaurantId);
-
-            return NoContent();
-        }
-
         [HttpPost]
-        public ActionResult Post([FromRoute]int restaurantId, [FromBody] CreateDishDto dto)
+        public ActionResult Post([FromRoute] int restaurantId, [FromBody] CreateDishDto dto)
         {
             var newDishId = _dishService.Create(restaurantId, dto);
 
@@ -38,18 +29,32 @@ namespace RestaurantAPI.Controllers
         }
 
         [HttpGet("{dishId}")]
-        public ActionResult<DishDto> Get([FromRoute] int restaurantId, [FromRoute] int dishId)
+        public ActionResult GetById([FromRoute] int restaurantId, [FromRoute] int dishId)
         {
-            DishDto dish = _dishService.GetById(restaurantId, dishId);
+           var dish = _dishService.GetById(restaurantId, dishId);
+
             return Ok(dish);
+
         }
 
         [HttpGet]
-        public ActionResult<List<DishDto>> Get([FromRoute] int restaurantId)
+        public ActionResult GetAll([FromRoute] int restaurantId)
         {
-            var result = _dishService.GetAll(restaurantId);
-            return Ok(result);
+            var dish = _dishService.GetAll(restaurantId);
+
+            return Ok(dish);
+
         }
+
+        [HttpDelete]
+        public ActionResult DeleteAll([FromRoute] int restaurantId)
+        {
+            _dishService.RemoveAll(restaurantId);
+
+            return NoContent();
+        }
+
+
 
     }
 }
