@@ -9,12 +9,15 @@ namespace WebApplication1.Entities
 
     public class RestaurantDbContext : DbContext
     {
-// private string _connectionString = "Server = (localdb)\\MSSQLLocalDB;Database=RestaurantDb;Trusted_Connection=True;";
-        private string _connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog = master; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+         private string _connectionString = "Server = (localdb)\\MSSQLLocalDB;Database=RestaurantDb;Trusted_Connection=True;";
+       // private string _connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog = master; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Adress> Adresses { get; set; }
         public DbSet<Dish> Dishes { get; set; }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -25,6 +28,9 @@ namespace WebApplication1.Entities
 
             modelBuilder.Entity<Adress>().Property(r => r.City).IsRequired().HasMaxLength(50);
             modelBuilder.Entity<Adress>().Property(r => r.Street).IsRequired().HasMaxLength(50);
+
+            modelBuilder.Entity<User>().Property(r => r.Email).IsRequired();
+            modelBuilder.Entity<Role>().Property(r => r.Name).IsRequired();
 
         }
 

@@ -34,7 +34,6 @@ C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\D
 C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -123,3 +122,16 @@ D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\ne
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\obj\Debug\net5.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\nlog.config
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\NLog.dll
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\obj\Debug\net5.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
