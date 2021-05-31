@@ -50,12 +50,17 @@ namespace WebApplication1.Services
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                //new Claim(ClaimTypes.Name, user.FirstName),
+                new Claim(ClaimTypes.Name, "" + user.FirstName),
                 new Claim(ClaimTypes.Role, user.Role.Name),
                 new Claim("DateOfBirth", user.DateOfBirth.Value.ToString("yyy-MM-dd")),
-                new Claim("Nationality", user.Nationality)
+                
 
             };
+
+            if (!String.IsNullOrEmpty(user.Nationality))
+            {
+                new Claim("Nationality", user.Nationality);
+            }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authenticationSettings.JwtKey));
             var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

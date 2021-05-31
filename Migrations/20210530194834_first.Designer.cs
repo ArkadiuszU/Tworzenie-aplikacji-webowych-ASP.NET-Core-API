@@ -10,7 +10,7 @@ using WebApplication1.Entities;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(RestaurantDbContext))]
-    [Migration("20210524070946_first")]
+    [Migration("20210530194834_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

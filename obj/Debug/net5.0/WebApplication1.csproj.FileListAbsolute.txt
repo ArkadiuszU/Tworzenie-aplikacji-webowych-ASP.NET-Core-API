@@ -80,7 +80,6 @@ D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\ne
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -135,3 +134,7 @@ C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\D
 C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\arkurb\source\repos\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\FluentValidation.dll
+D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

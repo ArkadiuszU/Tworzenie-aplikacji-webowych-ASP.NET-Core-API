@@ -41,9 +41,9 @@ namespace WebApplication1
 
             services.AddAuthentication(option =>
             {
-                option.DefaultAuthenticateScheme = "Bear";
-                option.DefaultScheme = "Bear";
-                option.DefaultChallengeScheme = "Bear";
+                option.DefaultAuthenticateScheme = "Bearer";
+                option.DefaultScheme = "Bearer";
+                option.DefaultChallengeScheme = "Bearer";
             }).AddJwtBearer(cfg => {
                 cfg.RequireHttpsMetadata = false;
                 cfg.SaveToken = true;
@@ -55,6 +55,11 @@ namespace WebApplication1
                 };
             });
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality", "Germany"));
+                //options.AddPolicy("MoreThan20", b => b.AddRequirements(new MinimumAgeRequirement(20)));
+            });
             services.AddSingleton(authenicationSettings);
             services.AddControllers();
             services.AddDbContext<RestaurantDbContext>();
@@ -96,6 +101,8 @@ namespace WebApplication1
             });
 
             app.UseRouting();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
