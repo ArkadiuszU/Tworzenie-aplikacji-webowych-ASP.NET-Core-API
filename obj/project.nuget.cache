@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PLw9airIawKMHUnuW91Tn3z/Pmi9ApBUj9raXgB9lox/mBTo0WTZDVtoy20K9Ltk51ef4mz7rH+kat1bhTdLfQ==",
+  "dgSpecHash": "W6xpPDTDHUvccxw4dkQZM4eDagqWOwaiGCLa+O0ZCjNe7ErvAnjdt4KBcgV4c1ekPsYC/8sFRGCV5mlAWa7KDA==",
   "success": true,
   "projectFilePath": "D:\\Projekty_portforio\\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\\WebApplication1.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,8 @@
     "C:\\Users\\Arkadiusz\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.1.0\\fluentvalidation.dependencyinjectionextensions.10.1.0.nupkg.sha512",
     "C:\\Users\\Arkadiusz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Arkadiusz\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.6\\microsoft.aspnetcore.authentication.jwtbearer.5.0.6.nupkg.sha512",
+    "C:\\Users\\Arkadiusz\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.6\\microsoft.aspnetcore.authorization.5.0.6.nupkg.sha512",
+    "C:\\Users\\Arkadiusz\\.nuget\\packages\\microsoft.aspnetcore.metadata\\5.0.6\\microsoft.aspnetcore.metadata.5.0.6.nupkg.sha512",
     "C:\\Users\\Arkadiusz\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Arkadiusz\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Arkadiusz\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

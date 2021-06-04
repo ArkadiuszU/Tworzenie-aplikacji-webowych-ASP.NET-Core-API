@@ -138,3 +138,5 @@ D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\ne
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
+D:\Projekty_portforio\Tworzenie-aplikacji-webowych-ASP.NET-Core-API\bin\Debug\net5.0\Microsoft.AspNetCore.Metadata.dll

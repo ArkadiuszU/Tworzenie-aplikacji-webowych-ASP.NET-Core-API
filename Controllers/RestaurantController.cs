@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using WebApplication1.Entities;
 using WebApplication1.Models;
@@ -24,16 +25,16 @@ namespace WebApplication1.Controllers
             _restaurantService = restaurantService;
         }
 
-        //[Authorize(Roles = "Admin")]
-        [Authorize(Roles = "Manager")]
+        //[Authorize("CreatedMultiple")]
         [HttpGet]
-        public ActionResult<IEnumerable<RestaurantDto>> GetAll()
+        public ActionResult<IEnumerable<RestaurantDto>> GetAll([FromQuery] RestaurantQuerry querry)
         {
-            var restaurantsDtos = _restaurantService.GetAll();
+            var restaurantsDtos = _restaurantService.GetAll(querry);
             return Ok(restaurantsDtos);
         }
 
-        [Authorize(Policy = "HasNationality")]
+        //[Authorize(Policy = "MoreThan20")]
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public ActionResult<RestaurantDto> GetById([FromRoute] int id )
         {
@@ -47,7 +48,6 @@ namespace WebApplication1.Controllers
         
         public ActionResult CreateRestaurant([FromBody] CreateRestaurantDto dto)
         {
-            var a = HttpContext.User.Claims;
             int restaurantId = _restaurantService.Create(dto);
 
             return Created($"/api/restaurant/{restaurantId}", null);

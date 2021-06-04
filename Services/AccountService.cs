@@ -50,11 +50,9 @@ namespace WebApplication1.Services
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, "" + user.FirstName),
+                new Claim(ClaimTypes.Name, "" + user.Email),
                 new Claim(ClaimTypes.Role, user.Role.Name),
                 new Claim("DateOfBirth", user.DateOfBirth.Value.ToString("yyy-MM-dd")),
-                
-
             };
 
             if (!String.IsNullOrEmpty(user.Nationality))

@@ -34,6 +34,11 @@ namespace WebApplication1.Middleware
                 context.Response.StatusCode = 400;
                 await context.Response.WriteAsync(bre.Message);
             }
+            catch (ForbidException e)
+            {
+                context.Response.StatusCode = 403;
+                await context.Response.WriteAsync(e.Message);
+            }
             catch (Exception e )
             {
                 _loger.LogError(e, e.Message);

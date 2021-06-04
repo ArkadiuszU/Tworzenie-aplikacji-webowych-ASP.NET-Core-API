@@ -1,5 +1,6 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebApplication1.Authorization;
 using WebApplication1.Entities;
 using WebApplication1.Middleware;
 using WebApplication1.Models;
@@ -58,8 +60,13 @@ namespace WebApplication1
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality", "Germany"));
-                //options.AddPolicy("MoreThan20", b => b.AddRequirements(new MinimumAgeRequirement(20)));
+                options.AddPolicy("MoreThan20", b => b.AddRequirements(new MinimumAgeRequirement(20)));
+                options.AddPolicy("CreatedMultiple", builder => builder.AddRequirements(new CreatedMultipleResourceRequirement(2)));
             });
+
+            services.AddScoped<IAuthorizationHandler, MinimumAgeRequirementHendler>();
+            services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHendler>();
+            services.AddScoped<IAuthorizationHandler, CreatedMultipleResourceRequirementHendler>();
             services.AddSingleton(authenicationSettings);
             services.AddControllers();
             services.AddDbContext<RestaurantDbContext>();
@@ -74,6 +81,8 @@ namespace WebApplication1
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
             services.AddControllers().AddFluentValidation();
+            services.AddScoped<IUserContextService, UserContextService>();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
