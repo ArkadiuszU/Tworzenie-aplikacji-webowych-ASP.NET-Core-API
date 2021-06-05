@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace WebApplication1.Exceptions
+namespace WebApplication1.Expression
 {
     public class ForbidException : Exception
     {

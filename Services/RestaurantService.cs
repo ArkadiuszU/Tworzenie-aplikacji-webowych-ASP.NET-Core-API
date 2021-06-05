@@ -5,11 +5,12 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using WebApplication1.Authorization;
 using WebApplication1.Entities;
-using WebApplication1.Exceptions;
+using WebApplication1.Expression;
 using WebApplication1.Models;
 
 namespace WebApplication1.Services
@@ -71,6 +72,30 @@ namespace WebApplication1.Services
                .Include(r => r.Dishes)
                .Where(r => ((searchPhrase == null)) || (r.Name.ToLower().Contains(searchPhrase.ToLower())
                                                    || r.Description.ToLower().Contains(searchPhrase.ToLower())));
+
+            if (!string.IsNullOrEmpty(querry.SortBy))
+            {
+                var columnSelectors = new Dictionary<string, Expression<Func<Restaurant, object>>>
+                {
+                    {nameof(Restaurant.Name), r => r.Name}, 
+                    {nameof(Restaurant.Description), r => r.Description}, 
+                    {nameof(Restaurant.Category), r => r.Category}
+                };
+
+                var selectedColumn = columnSelectors[querry.SortBy];
+
+                if (querry.SortDirection == SortDirection.ASC)
+                {
+                    baseQuerry = baseQuerry.OrderBy(selectedColumn);
+                }
+                else
+                {
+                    baseQuerry =  baseQuerry.OrderByDescending(selectedColumn);
+                }
+                   
+                    
+            }
+
 
             var restaurants = baseQuerry.Skip(querry.PageSize * (querry.PageNumber-1))
                .Take(querry.PageSize)

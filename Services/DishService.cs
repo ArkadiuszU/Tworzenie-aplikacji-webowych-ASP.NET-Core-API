@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Entities;
-using WebApplication1.Exceptions;
+using WebApplication1.Expression;
 using WebApplication1.Models;
 
 namespace WebApplication1.Services

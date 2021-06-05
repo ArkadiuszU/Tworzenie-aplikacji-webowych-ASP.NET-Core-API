@@ -80,9 +80,11 @@ namespace WebApplication1
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
+            services.AddScoped<IValidator<RestaurantQuerry>, RestaurantQuerryValidator>();
             services.AddControllers().AddFluentValidation();
             services.AddScoped<IUserContextService, UserContextService>();
             services.AddHttpContextAccessor();
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
